@@ -215,13 +215,13 @@ def mainar():
     delta = int( final - time_start )
     #----
     text = "* Source code: [https://github.com/MrIbrahem/wikidata-bot github].\n\n"
-    text = "Update: <onlyinclude>%s</onlyinclude>.\n" % dumpdate
-    text += "* Total items:{{subst:formatnum:%d}} \n" % tab['All_items']
-    text += "* Items without P31:{{subst:formatnum:%d}} \n" % tab['items_no_P31']
+    text = "Update: <onlyinclude>%s</onlyinclude>.\n" %             dumpdate
+    text += "* Total items:{{subst:formatnum:%d}} \n" %             tab['All_items']
+    text += "* Items without P31:{{subst:formatnum:%d}} \n" %       tab['items_no_P31']
     text += "* Items with 1 claim only:{{subst:formatnum:%d}} \n" % tab['items_1_claims']
-    text += "* Items with no claim:{{subst:formatnum:%d}} \n" % tab['items_0_claims']
-    text += "* Total number of claims:{{subst:formatnum:%d}} \n" % tab['all_claims_2020']
-    text += "<!-- bots work done in %d secounds --> \n" % delta
+    text += "* Items with no claim:{{subst:formatnum:%d}} \n" %     tab['items_0_claims']
+    text += "* Total number of claims:{{subst:formatnum:%d}} \n" %  tab['all_claims_2020']
+    text += "<!-- bots work done in %d secounds --> \n" %           delta
     text += "--~~~~~\n"
     #----
     text = text + "\n" + sections
@@ -235,7 +235,7 @@ def mainar():
     page.text = text
     page.save()
     #----
-    with open( 'dump/claims.txt' , 'w' ) as f:
+    with open( 'dump/p31.txt' , 'w' ) as f:
         f.write(text)
 #====
 if __name__ == '__main__':
