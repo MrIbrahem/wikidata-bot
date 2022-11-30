@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 
-python3 pwb.py dump/claims5
+python3 pwb.py dump/claims
 
 """
 #
@@ -252,6 +252,7 @@ def mainar():
     text = text + "\n" + sections
     text = text.replace("0 (0000)", "0")
     text = text.replace("0 (0)", "0")
+    
     title = "User:Mr. Ibrahem/claims"
     site = pywikibot.Site("wikidata")
     page = pywikibot.Page(site, title)
